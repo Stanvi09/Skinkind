@@ -45,8 +45,8 @@ Skincare shopping online is overwhelming: a thousand serums, the same five spons
 ```mermaid
 flowchart LR
     A["Pinterest / Google search"] --> B["skinkind.skin<br/>(GitHub Pages + custom domain)"]
-    B --> C["Category hubs<br/>serums · masks · acne…"]
-    C --> D["Product pages<br/>why it works · who it's for"]
+    B --> C["Category hubs<br/>serums, masks, acne"]
+    C --> D["Product pages<br/>why it works, who it is for"]
     D --> E["Amazon<br/>(affiliate link)"]
 ```
 
