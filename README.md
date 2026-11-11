@@ -1,102 +1,78 @@
-<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/header-dark.svg">
+  <img alt="SkinKind: a curated skincare guide" src=".github/assets/header-light.svg" width="100%">
+</picture>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:FAF7F5,100:C9A27C&height=200&section=header&text=SkinKind&fontSize=64&fontColor=3A2E26&fontAlignY=38&desc=curated%20skincare%2C%20minus%20the%20noise&descSize=18&descAlignY=58&descColor=5C4A3D" width="100%" alt="SkinKind banner"/>
+<p align="center"><a href="https://skinkind.skin"><b>Visit skinkind.skin</b></a></p>
 
-**A hand-built skincare discovery site, live on its own domain, with an affiliate business model.**
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/stats-dark.svg">
+  <img alt="35 hand-written pages. 6 categories. 1 shared stylesheet. 0 frameworks." src=".github/assets/stats-light.svg" width="100%">
+</picture>
 
-[![Live](https://img.shields.io/badge/live-skinkind.skin-C9A27C?style=for-the-badge&labelColor=3A2E26)](https://skinkind.skin)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![GitHub Pages](https://img.shields.io/badge/hosted%20on-GitHub%20Pages-222?style=for-the-badge&logo=github)
+<br>
 
-</div>
+## 01 &nbsp; The idea
 
----
+Skincare shopping online is loud: a thousand serums, the same sponsored listings, and nobody telling you *which one suits your skin and your budget*.
 
-## ✦ The idea
+SkinKind is the quiet version. It's an editorial site that groups products by what you need (acne-prone skin, a budget routine, natural ingredients, body care) and says plainly who each product is for. It runs on its own domain and is funded through the Amazon Associates programme.
 
-Skincare shopping online is overwhelming: a thousand serums, the same five sponsored listings, and no one telling you *which one fits your skin and your budget*.
-
-**SkinKind** is my answer: a calm, editorial-style site that groups products by what you actually need (acne-prone skin, a budget routine, natural ingredients, body care) and links straight to the product. It's live on its own domain and monetised through the Amazon Associates programme.
-
-> I treated this like a small product, not a class project: custom domain, legal pages, SEO metadata and a design system. Then I kept shipping pages.
-
-## ✦ At a glance
-
-| | |
-|---|---|
-| **Live site** | [skinkind.skin](https://skinkind.skin) |
-| **Pages** | 35 hand-written HTML pages: category hubs, product reviews and curated lists |
-| **Categories** | Natural · Body care · Serums · Sheet masks · Shampoo & conditioner · Acne & sensitive |
-| **Business model** | Amazon Associates affiliate links, with a public [disclosure](https://skinkind.skin/disclosure.html) and [privacy policy](https://skinkind.skin/privacy.html) |
-| **Stack** | Plain HTML + one shared stylesheet (~1,100 lines). No framework, no build step. |
-
-## ✦ Design choices
-
-- **Editorial, not e-commerce.** Serif display type (*Playfair Display*, *Cormorant Garamond*) paired with *Montserrat* / *Inter* for body text, so it reads like a beauty magazine rather than a store.
-- **One accent colour.** A muted gold `#C9A27C` on warm off-whites (`#FAF7F5`, `#FFFAF0`) carries the brand across every page.
-- **One stylesheet for everything.** All 35 pages share `style.css`, so the look stays consistent and the site loads fast.
-- **Responsive.** Breakpoints at 992 px, 900 px and 768 px, because people browsing skincare on Pinterest are mostly on their phones.
-- **Search-ready.** Each product page has its own `<title>` and meta description written for search.
-- **Trust first.** Every affiliate link is covered by a clear disclosure page, as Amazon's programme requires.
-
-## ✦ How it's built
+## 02 &nbsp; How it's built
 
 ```mermaid
 flowchart LR
-    A["Pinterest / Google search"] --> B["skinkind.skin<br/>(GitHub Pages + custom domain)"]
+    A["Pinterest / Google search"] --> B["skinkind.skin<br/>GitHub Pages + custom domain"]
     B --> C["Category hubs<br/>serums, masks, acne"]
     C --> D["Product pages<br/>why it works, who it is for"]
-    D --> E["Amazon<br/>(affiliate link)"]
+    D --> E["Amazon<br/>affiliate link"]
 ```
 
-## ✦ Project structure
+## 03 &nbsp; Details I obsessed over
+
+- **It reads like a magazine, not a store.** Serif display type (*Playfair Display*, *Cormorant Garamond*) over clean sans body text (*Montserrat*, *Inter*).
+- **One accent colour.** A muted gold, `#C9A27C`, on warm off-whites. Nothing else competes with it.
+- **One stylesheet.** All 35 pages share a single `style.css`, so every page feels like it came from the same hand.
+- **Phone first.** Breakpoints at 992, 900 and 768 px, because skincare browsing happens on Pinterest, on phones.
+- **A description for every page.** Each product page has its own title and meta description, written for search.
+- **Trust is part of the design.** A clear [affiliate disclosure](https://skinkind.skin/disclosure.html) and [privacy policy](https://skinkind.skin/privacy.html), linked from the navigation.
+
+## 04 &nbsp; Repository map
 
 ```
 Skinkind/
-├── index.html              # home: hero + category grid
-├── style.css               # the single shared design system
-├── <category>.html         # serums, sheet-masks, shampoo, body-care, natural-skincare, acne&sensitive…
-├── <product>.html          # cetaphil, centellaserum, khadi, plum, sebamed…
-├── disclosure.html         # Amazon Associates disclosure
-├── privacy.html            # privacy policy
-├── images/                 # product & category photography
-└── CNAME                   # custom domain → skinkind.skin
+├── index.html          home: hero and category grid
+├── style.css           the shared design system
+├── <category>.html     serums, sheet-masks, shampoo, body-care, natural-skincare…
+├── <product>.html      one page per product
+├── disclosure.html     affiliate disclosure
+├── privacy.html        privacy policy
+├── images/             product and category photography
+└── CNAME               custom domain, skinkind.skin
 ```
 
-## ✦ Run it locally
-
-No install needed. It's a static site.
+## 05 &nbsp; Run it locally
 
 ```bash
-git clone https://github.com/Stanvi09/Skinkind.git
-cd Skinkind
-python -m http.server 8000      # then open http://localhost:8000
+git clone https://github.com/Stanvi09/Skinkind.git && cd Skinkind
+python -m http.server 8000          # open http://localhost:8000
 ```
 
-## ✦ What I learned
+## 06 &nbsp; What it taught me
 
-- **Shipping is a skill.** Buying a domain, wiring DNS to GitHub Pages and getting accepted into an affiliate programme taught me more than any tutorial.
-- **Content is the product.** Clean code doesn't matter if the recommendations aren't useful, so every page answers *"who is this for?"*
-- **Constraints help.** Skipping frameworks kept me focused on layout, typography and responsive CSS.
+Shipping is a skill. Buying a domain, pointing DNS at GitHub Pages and joining an affiliate programme taught me more than a tutorial would have. And content is the product: clean code means nothing if the recommendations don't help someone choose.
 
-## ✦ What's next
+## 07 &nbsp; Next
 
-- [ ] Move to a static-site generator (Eleventy / Astro) so product pages come from one template + data file
-- [ ] Optimise images (WebP + `loading="lazy"`)
-- [ ] A "build my routine" quiz that recommends a 3-step routine by skin type
+- Generate product pages from one template and a data file (Eleventy or Astro)
+- WebP images with lazy loading
+- A short quiz that builds a three-step routine for your skin type
 
----
+<br>
 
-<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/footer-dark.svg">
+  <img alt="Designed and built by Tanvi Sadashiv, one detail at a time." src=".github/assets/footer-light.svg" width="100%">
+</picture>
 
-Designed, written and shipped by **Tanvi Sadashiv**
-<br/>
-<a href="https://www.linkedin.com/in/tanvi-sadashiv-3713ba381"><img src="https://img.shields.io/badge/LinkedIn-connect-0A66C2?style=flat-square&logo=linkedin" alt="LinkedIn"/></a>
-<a href="https://github.com/Stanvi09"><img src="https://img.shields.io/badge/GitHub-Stanvi09-181717?style=flat-square&logo=github" alt="GitHub"/></a>
-
-<sub>Product links on the live site are affiliate links. SkinKind may earn a small commission at no extra cost to you.</sub>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:C9A27C,100:FAF7F5&height=100&section=footer" width="100%"/>
-
-</div>
+<p align="center"><sub><a href="https://www.linkedin.com/in/tanvi-sadashiv-3713ba381">LinkedIn</a> &nbsp;&middot;&nbsp; <a href="https://github.com/Stanvi09">GitHub</a><br><br><i>Product links on the live site are affiliate links. SkinKind may earn a small commission at no extra cost to you.</i></sub></p>
